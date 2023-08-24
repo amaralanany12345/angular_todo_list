@@ -1,0 +1,13 @@
+<div class="container">
+    <input   type="text" #the_task/>
+    <button (click)="add_tasks(the_task.value)">add task</button>
+    <div class="task">
+
+        <div *ngFor="let item of tasks; let i= index">
+            <div class="content">
+                <h2>{{item}}</h2>
+                <button (click)="delete_task(i)">X</button>
+            </div>
+        </div>
+    </div>
+</div>
